@@ -41,9 +41,9 @@ h3 {
   word-break: keep-all;
   color: #1a1a1a;
 }
-input::placeholder{
-    color: #ccc;
-    opacity: 1;
+input::placeholder {
+  color: #ccc;
+  opacity: 1;
 }
 .wrapper {
   display: flex;
@@ -110,7 +110,6 @@ input::placeholder{
   font-size: 0.85rem;
 }
 
-/* 입력 필드 스타일 */
 .input-card {
   background: #fcfcfc;
   border: 1px solid #f1f1f1;
@@ -152,7 +151,6 @@ input[type="number"]:focus {
   gap: 10px;
 }
 
-/* 결과 창 */
 .result-box {
   display: flex;
   justify-content: center;
@@ -178,7 +176,6 @@ input[type="number"]:focus {
   color: #e74c3c;
 }
 
-/* 국내 비교 카드 */
 .compare-grid {
   display: flex;
   flex-direction: column;
@@ -201,11 +198,11 @@ input[type="number"]:focus {
   font-size: 0.85rem;
 }
 .card-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    flex: 1;
-    padding: 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  padding: 0 14px;
 }
 .card-inputs .input-row {
   margin-bottom: 8px;
@@ -228,7 +225,6 @@ input[type="number"]:focus {
   font-size: 1.1rem;
 }
 
-/* 버튼 */
 .calc-btn {
   width: 100%;
   margin-top: 20px;
@@ -261,7 +257,7 @@ input[type="number"]:focus {
 
 .benefit {
   color: #55efc4;
-} /* 이득일 때 색상 */
+}
 .loss {
   color: #ff7675;
-} /* 손해일 때 색상 */
+}

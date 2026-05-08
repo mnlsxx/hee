@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수입 원가 비교 계산기</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="hee.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-container">
+        <div class="section china-side" id="chinaSection">
+          <div class="section-header">
+            <h3 class="title">🇨🇳 중국 판매</h3>
+            <div class="header-btns">
+              <div class="rate-badge">
+                <label>환율</label>
+                <input
+                  type="number"
+                  id="exchangeRate"
+                  step="0.01"
+                  oninput="calculateAll()"
+                />
+              </div>
+              <button class="reset-btn" onclick="resetSection('chinaSection')">
+                초기화
+              </button>
+            </div>
+          </div>
+
+          <div class="input-card">
+            <div class="input-row">
+              <div class="input-group">
+                <label>상품 가격 (￥)</label>
+                <input
+                  type="number"
+                  id="cnPrice"
+                  placeholder="0"
+                  oninput="calculateAll()"
+                />
+              </div>
+              <div class="input-group">
+                <label>물품 개수</label>
+                <input
+                  type="number"
+                  id="cnQty"
+                  placeholder="개수"
+                  oninput="calculateAll()"
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <label>현지 할인율 (%)</label>
+              <input
+                type="number"
+                id="cnDiscount"
+                placeholder="0"
+                oninput="calculateAll()"
+              />
+            </div>
+          </div>
+
+          <div class="input-card shipping-card">
+            <div class="input-group">
+              <label>🚚 배송비 (￥)</label>
+              <input
+                type="number"
+                id="cnShippingFee"
+                placeholder="0"
+                oninput="calculateAll()"
+              />
+            </div>
+          </div>
+
+          <div class="result-box china-res">
+            <span class="res-label">총액</span>
+            <div class="res-value"><span id="cnTotalCost">0</span>원</div>
+          </div>
+        </div>
+        <div class="section korea-side" id="koreaSection">
+          <div class="section-header">
+            <h3>🇰🇷 국내 판매</h3>
+            <button class="reset-btn" onclick="resetSection('koreaSection')">
+              초기화
+            </button>
+          </div>
+
+          <div class="compare-grid">
+            <div class="compare-card">
+              <div class="card-title">판매처 A</div>
+              <div class="card-inputs">
+                <div class="input-row">
+                  <input
+                    type="number"
+                    class="kr-p"
+                    placeholder="가격"
+                    oninput="calculateAll()"
+                  />
+                  <input
+                    type="number"
+                    class="kr-q"
+                    placeholder="개수"
+                    oninput="calculateAll()"
+                  />
+                </div>
+                <input
+                  type="number"
+                  class="kr-s"
+                  placeholder="국내 배송비"
+                  oninput="calculateAll()"
+                />
+              </div>
+              <div class="unit-res">총액 <span>0</span>원</div>
+            </div>
+            <div class="compare-card">
+              <div class="card-title">판매처 B</div>
+              <div class="card-inputs">
+                <div class="input-row">
+                  <input
+                    type="number"
+                    class="kr-p"
+                    placeholder="가격"
+                    oninput="calculateAll()"
+                  />
+                  <input
+                    type="number"
+                    class="kr-q"
+                    placeholder="개수"
+                    oninput="calculateAll()"
+                  />
+                </div>
+                <input
+                  type="number"
+                  class="kr-s"
+                  placeholder="국내 배송비"
+                  oninput="calculateAll()"
+                />
+              </div>
+              <div class="unit-res">총액 <span>0</span>원</div>
+            </div>
+            <div class="compare-card">
+              <div class="card-title">판매처 C</div>
+              <div class="card-inputs">
+                <div class="input-row">
+                  <input
+                    type="number"
+                    class="kr-p"
+                    placeholder="가격"
+                    oninput="calculateAll()"
+                  />
+                  <input
+                    type="number"
+                    class="kr-q"
+                    placeholder="개수"
+                    oninput="calculateAll()"
+                  />
+                </div>
+                <input
+                  type="number"
+                  class="kr-s"
+                  placeholder="국내 배송비"
+                  oninput="calculateAll()"
+                />
+              </div>
+              <div class="unit-res">총액 <span>0</span>원</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vs-container">
+        <div id="finalComparison">
+          가격을 입력하면 수입 메리트를 분석합니다.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

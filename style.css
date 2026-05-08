@@ -1,0 +1,267 @@
+* {
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.section {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  word-break: keep-all;
+  color: #1a1a1a;
+}
+input::placeholder{
+    color: #ccc;
+    opacity: 1;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 32px;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header-btns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.section-header .title {
+  width: 120px;
+}
+.reset-btn {
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.reset-btn:hover {
+  background: #e2e2e2;
+}
+
+.rate-badge {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 8px;
+}
+
+.rate-badge label {
+  margin-bottom: 0;
+  word-break: keep-all;
+  font-size: 0.75rem;
+  color: #666;
+  margin-right: 10px;
+}
+.rate-badge input {
+  width: 70px;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  color: #2d3436;
+  font-size: 0.85rem;
+}
+
+/* 입력 필드 스타일 */
+.input-card {
+  background: #fcfcfc;
+  border: 1px solid #f1f1f1;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.input-group {
+  margin-bottom: 12px;
+}
+.input-group:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+input[type="number"]:focus {
+  border-color: #0984e3;
+  box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.1);
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* 결과 창 */
+.result-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.china-res {
+  background: #fff5f5;
+  border: 1px solid #ffe3e3;
+}
+.res-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #e74c3c;
+}
+.res-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e74c3c;
+}
+
+/* 국내 비교 카드 */
+.compare-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+.compare-card {
+  background: #f8fbff;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #555;
+  font-size: 0.85rem;
+}
+.card-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    padding: 0 14px;
+}
+.card-inputs .input-row {
+  margin-bottom: 8px;
+}
+.card-inputs input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.unit-res {
+  text-align: right;
+  min-width: 120px;
+  font-weight: 700;
+  color: #2d3436;
+}
+.unit-res span {
+  font-size: 1.1rem;
+}
+
+/* 버튼 */
+.calc-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  background: #2d3436;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.calc-btn:hover {
+  background: #000000;
+}
+.vs-container {
+  width: calc(100% - 40px);
+  margin: 0 auto 50px auto;
+  padding: 20px;
+  background: #2d3436;
+  color: white;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefit {
+  color: #55efc4;
+} /* 이득일 때 색상 */
+.loss {
+  color: #ff7675;
+} /* 손해일 때 색상 */
